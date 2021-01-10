@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('Exit');
 /**
  * 
  */
-class User_model extends CI_Model
+class UserModel extends CI_Model
 {
 	
 	
 	private $_table ='m_user';
 
 	public $name;
-	public $email:
+	public $email;
 	public $password;
 	public $status;
 
@@ -21,7 +21,7 @@ class User_model extends CI_Model
 
 	public function getUserById($id)
 	{
-		return $this->db->get_where($this->_table,["id"=>$id])->row();
+		return $this->db->get_where($this->_table,array("id"=>$id))->row();
 	}
 
 }

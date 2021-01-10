@@ -1,11 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('Exit');
-/**
- * 
- */
-class Customer_model extends CI_Model
+
+
+class CustomerModel extends CI_Model
 {
-	
 	private $_table = 'm_customer';
 	public $name;
 	public $alamat;
@@ -18,6 +15,6 @@ class Customer_model extends CI_Model
 
 	public function getCustomerById($id)
 	{
-		return $this->db->get_where($this->_table,["id"=>$id])->row();
+		return $this->db->get_where($this->_table,array("id"=>$id))->row();
 	}
 }
