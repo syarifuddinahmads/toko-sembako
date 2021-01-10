@@ -56,4 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['product/list'] = 'ProductController/listProduct';
 $route['product/add'] = 'ProductController/addProduct';
 $route['product/save'] = 'ProductController/saveProduct';
-$route['product/edit'] = 'ProductController/saveProduct';
+$route['product/edit'] = 'ProductController/editProduct';
+$route['product/delete'] = 'ProductController/deleteProduct';
+$route['product/update'] = 'ProductController/updateProduct';

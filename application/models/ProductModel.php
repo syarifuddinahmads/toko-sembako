@@ -72,4 +72,14 @@ class ProductModel extends CI_Model
 	public function deleteProduct($id){
 		return $this->db->delete($this->_table,array("id" => $id));
 	}
+
+	public function updateProduct(){
+		$post = $this->input->post();
+		$this->name = $post['name'];
+		$this->price = $post['price'];
+		$this->stock = $post['stock'];
+		$this->status = $post['status'];
+		$this->category = $post['category'];
+		return $this->db->update($this->_table,$this,array("id" => $post['id']));
+	}
 }

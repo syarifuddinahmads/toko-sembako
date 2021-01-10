@@ -4,7 +4,8 @@ $this->load->view('partials/header');
 ?>
 
 <div class="container mt-4 mb-4">
-	<form action="<?php echo site_url('product/save')?>" method="post" enctype="multipart/form-data">
+	<form action="<?php echo site_url('product/update')?>" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="<?php echo $product->id?>">
 		<div class="card">
 			<div class="card-header">
 				<div class="row">
@@ -23,32 +24,32 @@ $this->load->view('partials/header');
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="">Name</label>
-							<input type="text" class="form-control" name="name">
+							<input type="text" class="form-control" name="name" value="<?php echo $product->name?>" required>
 						</div>
 						<div class="form-group">
 							<label for="">Price</label>
-							<input type="number" class="form-control" name="price">
+							<input type="number" class="form-control" name="price" value="<?php echo $product->price?>" required>
 						</div>
 						<div class="form-group">
 							<label for="">Stock</label>
-							<input type="number" class="form-control" name="stock">
+							<input type="number" class="form-control" name="stock"  value="<?php echo $product->stock?>" required>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="">Category</label>
-							<select name="category" class="form-control">
+							<select name="category" class="form-control" required>
 								<option value="">Select Category</option>
 								<?php foreach ($category_product as $cp){?>
-									<option value="<?php echo $cp->id ?>"><?php echo $cp->name?></option>
+									<option <?php echo $product->category == $cp->id ?'selected':'' ?> value="<?php echo $cp->id ?>"><?php echo $cp->name?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="">Category</label>
-							<select name="status" class="form-control">
-								<option value="Active">Active</option>
-								<option value="In Active">In Active</option>
+							<select name="status" class="form-control" required>
+								<option <?php echo $product->status == 'Active' ?'selected':'' ?> value="Active">Active</option>
+								<option <?php echo $product->status == 'In Active' ?'selected':'' ?> value="In Active">In Active</option>
 							</select>
 						</div>
 					</div>
@@ -57,7 +58,7 @@ $this->load->view('partials/header');
 			<div class="card-footer">
 				<div class="text-right">
 					<button type="reset" class="btn btn-warning"><i class=""></i> Cancel</button>
-					<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Product</button>
+					<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Product</button>
 				</div>
 			</div>
 		</div>

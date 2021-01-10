@@ -23,21 +23,21 @@ $this->load->view('partials/header');
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="">Name</label>
-							<input type="text" class="form-control" name="name">
+							<input type="text" class="form-control" name="name" required>
 						</div>
 						<div class="form-group">
 							<label for="">Price</label>
-							<input type="number" class="form-control" name="price">
+							<input type="number" class="form-control" name="price" required>
 						</div>
 						<div class="form-group">
 							<label for="">Stock</label>
-							<input type="number" class="form-control" name="stock">
+							<input type="number" class="form-control" name="stock" required>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="">Category</label>
-							<select name="category" class="form-control">
+							<select name="category" class="form-control" required>
 								<option value="">Select Category</option>
 								<?php foreach ($category_product as $cp){?>
 									<option value="<?php echo $cp->id ?>"><?php echo $cp->name?></option>
@@ -46,7 +46,7 @@ $this->load->view('partials/header');
 						</div>
 						<div class="form-group">
 							<label for="">Category</label>
-							<select name="status" class="form-control">
+							<select name="status" class="form-control" required>
 								<option value="Active">Active</option>
 								<option value="In Active">In Active</option>
 							</select>

@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		<div class="card-body">
-			<table class="table">
+			<table class="table" id="tableProduct">
 			<thead>
 				<tr>
 					<th class="text-center">#</th>
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<td class="text-right"><?php echo number_format($p->price,2) ?></td>
 						<td class="text-center"><?php echo $p->stock ?></td>
 						<td class="text-center">
-							<a href="<?php echo site_url('product/edit/'.$p->id)?>" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
+							<a href="<?php echo site_url('product/edit?id='.$p->id)?>" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
 							<a href="javascript:void(0)" class="btn btn-sm btn-danger btnDeleteProduct" data-id="<?php echo $p->id ?>"><i class="fa fa-trash"></i></a>
 						</td>
 					</tr>
@@ -45,6 +45,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</table>
 		</div>
 	</div>
+</div>
+
+<div class="d-none">
+	<form id="formDeleteProduct" action="<?php echo site_url('product/delete')?>" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="id" id="idProductDelete">
+	</form>
 </div>
 
 <?php
