@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
      <li class="nav-item">
-        <a class="nav-link" href="#">Product</a>
+        <a class="nav-link" href="<?php echo site_url('product/list')?>">Product</a>
       </li>
     </ul>
   </div>
