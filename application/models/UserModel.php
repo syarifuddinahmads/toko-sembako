@@ -24,4 +24,8 @@ class UserModel extends CI_Model
 		return $this->db->get_where($this->_table,array("id"=>$id))->row();
 	}
 
+	function cek_login($where){
+		return $this->db->get_where($this->_table,$where);
+	}
+
 }

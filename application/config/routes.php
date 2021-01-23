@@ -53,9 +53,23 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// product
 $route['product/list'] = 'ProductController/listProduct';
 $route['product/add'] = 'ProductController/addProduct';
 $route['product/save'] = 'ProductController/saveProduct';
 $route['product/edit'] = 'ProductController/editProduct';
 $route['product/delete'] = 'ProductController/deleteProduct';
 $route['product/update'] = 'ProductController/updateProduct';
+
+// product category
+$route['product/category/list'] = 'ProductCategoryController/listCategoryProduct';
+$route['product/category/add'] = 'ProductCategoryController/addCategoryProduct';
+$route['product/category/save'] = 'ProductCategoryController/saveCategoryProduct';
+$route['product/category/edit'] = 'ProductCategoryController/editCategoryProduct';
+$route['product/category/delete'] = 'ProductCategoryController/deleteCategoryProduct';
+$route['product/category/update'] = 'ProductCategoryController/updateCategoryProduct';
+
+// Auth
+$route['login'] = 'LoginController/loginView';
+$route['login/process'] = 'LoginController/doLogin';
+$route['logout'] = 'LoginController/logout';

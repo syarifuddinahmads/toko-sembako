@@ -57,7 +57,7 @@ $this->load->view('partials/header');
 			</div>
 			<div class="card-footer">
 				<div class="text-right">
-					<button type="reset" class="btn btn-warning"><i class=""></i> Cancel</button>
+					<button type="reset" class="btn btn-warning"><i class="fa fa-close"></i> Cancel</button>
 					<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Product</button>
 				</div>
 			</div>
