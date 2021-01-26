@@ -39,7 +39,7 @@ $this->load->view('partials/header');
 						<select id="product" class="form-control" required>
 							<option value="">Select Product</option>
 							<?php foreach ($products as $p){?>
-								<option value="<?php echo $p->id ?>"><?php echo $p->name?></option>
+								<option data-name="<?php echo $p->name ?>" data-price="<?php echo $p->price ?>" value="<?php echo $p->id ?>"><?php echo $p->name?></option>
 							<?php } ?>
 						</select>
 					</div>
@@ -50,20 +50,21 @@ $this->load->view('partials/header');
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
-						<button class="btn btn-success mt-4"><i class="fa fa-plus"></i> Add Product</button>
+						<button class="btn btn-success mt-4 btnAddProduct"><i class="fa fa-plus"></i> Add Product</button>
 					</div>
 				</div>
 			</div>
 			<hr>
-			<form action="">
+			<form action="<?php echo site_url('transaction/save')?>" id="formTransaction" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id_customer" id="id_customer">
 
 				<table class="table" id="tableTransactionProduct">
 					<thead>
 					<tr>
 						<th class="text-center">Product</th>
-						<th class="text-center">Qty</th>
 						<th class="text-center">Price</th>
+						<th class="text-center">Qty</th>
+						<th class="text-center">Subtotal</th>
 						<th class="text-center">Action</th>
 					</tr>
 					</thead>
@@ -74,7 +75,7 @@ $this->load->view('partials/header');
 		<div class="card-footer">
 			<div class="text-right">
 				<button type="reset" class="btn btn-warning"><i class="fa fa-close"></i> Cancel</button>
-				<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Transaction</button>
+				<button type="submit" class="btn btn-primary btnSaveTransaction"><i class="fa fa-save"></i> Save Transaction</button>
 			</div>
 		</div>
 	</div>

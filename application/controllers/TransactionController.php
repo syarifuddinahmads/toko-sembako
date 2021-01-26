@@ -24,4 +24,9 @@ class TransactionController extends CI_Controller
 		return $this->load->view('transaction/add_transaction',$data);
 	}
 
+	public function saveTransaction(){
+		$post = $this->input->post();
+		var_dump($post);
+	}
+
 }

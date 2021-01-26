@@ -77,6 +77,7 @@ $route['logout'] = 'LoginController/logout';
 // Transaction
 $route['transaction/list'] = 'TransactionController/listTransaction';
 $route['transaction/add'] = 'TransactionController/addTransaction';
+$route['transaction/save'] = 'TransactionController/saveTransaction';
 
 // product
 $route['customer/list'] = 'CustomerController/listCustomer';
