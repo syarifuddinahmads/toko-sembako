@@ -88,6 +88,7 @@ $this->load->view('partials/header');
 						<td class="text-right"><strong><?php echo number_format($subtotal,2) ?></strong></td>
 					</tr>
 					</tbody>
+					<input type="hidden" name="grandtotal" value="<?php echo $subtotal ?>">
 				</table>
 			</div>
 			<div class="card-footer">
