@@ -30,6 +30,27 @@ $this->load->view('partials/header');
 						</select>
 					</div>
 				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="">Shipping</label>
+						<select name="type_shipping" id="shipping" class="form-control" required>
+							<option value="">Select Shipping</option>
+							<option value="1">Shipping</option>
+							<option value="2">Pick Up</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="">Payment</label>
+						<select name="payment_type" id="payment" class="form-control" required>
+							<option value="">Select Payment</option>
+							<option value="1">Paid</option>
+							<option value="2">Pending</option>
+							<option value="3">Rejected</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			<hr>
 			<div class="row">
@@ -46,7 +67,7 @@ $this->load->view('partials/header');
 				</div>
 				<div class="col-md-3">
 					<label for="">Qty</label>
-					<input id="qty" type="number" class="form-control text-right" placeholder="0">
+					<input id="qty" type="number" class="form-control text-right" placeholder="0" value="1" min="1">
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
@@ -57,6 +78,9 @@ $this->load->view('partials/header');
 			<hr>
 			<form action="<?php echo site_url('transaction/save')?>" id="formTransaction" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id_customer" id="id_customer">
+				<input type="hidden" name="type_shipping" id="type_shipping">
+				<input type="hidden" name="payment_status" id="payment_status">
+				<input type="hidden" name="code_transaction" id="code_transaction" value="<?php echo 'HT-'.mt_rand(100000, 999999);; ?>">
 
 				<table class="table" id="tableTransactionProduct">
 					<thead>
