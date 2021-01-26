@@ -14,7 +14,10 @@
 			<a class="nav-link" href="<?php echo site_url('product/category/list') ?>">Product Category</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo site_url('product/category/list') ?>">Transaction</a>
+			<a class="nav-link" href="<?php echo site_url('customer/list') ?>">Customer</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo site_url('transaction/list') ?>">Transaction</a>
 		</li>
     </ul>
 	  <ul class="navbar-nav ml-auto">

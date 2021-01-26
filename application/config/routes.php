@@ -73,3 +73,15 @@ $route['product/category/update'] = 'ProductCategoryController/updateCategoryPro
 $route['login'] = 'LoginController/loginView';
 $route['login/process'] = 'LoginController/doLogin';
 $route['logout'] = 'LoginController/logout';
+
+// Transaction
+$route['transaction/list'] = 'TransactionController/listTransaction';
+$route['transaction/add'] = 'TransactionController/addTransaction';
+
+// product
+$route['customer/list'] = 'CustomerController/listCustomer';
+$route['customer/add'] = 'CustomerController/addCustomer';
+$route['customer/save'] = 'CustomerController/saveCustomer';
+$route['customer/edit'] = 'CustomerController/editCustomer';
+$route['customer/delete'] = 'CustomerController/deleteCustomer';
+$route['customer/update'] = 'CustomerController/updateCustomer';
